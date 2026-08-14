@@ -25,12 +25,19 @@ export function PresetCard({
   return (
     <article className="panel overflow-hidden">
       <div className="relative aspect-video overflow-hidden bg-secondary">
-        <img
-          src={preset.thumb}
-          alt={`${preset.name} style reference`}
-          loading="lazy"
-          className="h-full w-full object-cover"
-        />
+        {preset.thumb ? (
+          <img
+            src={preset.thumb}
+            alt={`${preset.name} style reference`}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center">
+            <span className="label-kicker">extracted clip</span>
+          </div>
+        )}
+
         <div className="film-grain absolute inset-0" />
         <span className="label-kicker absolute left-2 top-2 rounded-sm bg-background/80 px-2 py-1 text-foreground">
           {preset.source}
