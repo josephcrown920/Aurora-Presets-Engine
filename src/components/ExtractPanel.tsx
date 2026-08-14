@@ -42,24 +42,26 @@ export function ExtractPanel({ onExtracted }: { onExtracted: (p: Preset) => void
         if (res.status === 402) throw new Error("AI credits exhausted for this workspace.");
         throw new Error(text.slice(0, 160) || "Extraction failed");
       }
-      const d = (await res.json()) as Record<string, string> & { tags?: string[] };
+      type Extracted = { [k: string]: unknown; tags?: string[] };
+      const raw = (await res.json()) as Extracted;
+      const d = (k: string) => (typeof raw[k] === "string" ? (raw[k] as string) : "");
       const objectUrl = kind === "image" ? URL.createObjectURL(file) : "";
       onExtracted({
         id: `x-${Date.now()}`,
-        name: d.name || "Untitled Preset",
+        name: d("name") || "Untitled Preset",
         source: kind,
         thumb: objectUrl,
-        tags: (d.tags ?? []).slice(0, 4),
+        tags: (raw.tags ?? []).slice(0, 4),
         dna: {
-          subject: d.subject ?? "",
-          camera: d.camera ?? "",
-          lens: d.lens ?? "",
-          lighting: d.lighting ?? "",
-          grade: d.grade ?? "",
-          texture: d.texture ?? "",
-          motion: d.motion ?? "",
-          mood: d.mood ?? "",
-          negative: d.negative ?? "",
+          subject: d("subject"),
+          camera: d("camera"),
+          lens: d("lens"),
+          lighting: d("lighting"),
+          grade: d("grade"),
+          texture: d("texture"),
+          motion: d("motion"),
+          mood: d("mood"),
+          negative: d("negative"),
         },
       });
     } catch (e) {
