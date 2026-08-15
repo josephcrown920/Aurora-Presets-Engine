@@ -61,8 +61,8 @@ export function ExtractPanel({ onExtracted }: { onExtracted: (p: Preset) => void
           texture: d("texture"),
           motion: d("motion"),
           mood: d("mood"),
-          vfx: d("vfx") || undefined,
           negative: d("negative"),
+          ...(d("vfx") ? { vfx: d("vfx") } : {}),
         },
       });
     } catch (e) {
