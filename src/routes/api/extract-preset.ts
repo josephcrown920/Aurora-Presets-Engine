@@ -10,6 +10,7 @@ const FIELDS = [
   "texture",
   "motion",
   "mood",
+  "vfx",
   "negative",
   "tags",
 ] as const;
@@ -17,7 +18,7 @@ const FIELDS = [
 const SYSTEM = `You are a cinematography and prompt-engineering analyst. You look at a reference image or video and reverse-engineer its VISUAL STYLE into a reusable preset that can be applied to any other subject.
 
 Return ONLY minified JSON with these keys:
-{"name":string (3-4 word preset title),"subject":string (what is literally in the reference, one sentence),"camera":string (framing, angle, staging),"lens":string (focal length, aperture, depth of field),"lighting":string (sources, direction, quality, contrast),"grade":string (color palette, contrast, blacks),"texture":string (grain, sharpness, artifacts, filtration),"motion":string (camera + subject movement, editing pace),"mood":string,"negative":string (comma separated things to avoid),"tags":string[] (3 short lowercase tags)}
+{"name":string (3-4 word preset title),"subject":string (what is literally in the reference, one sentence),"camera":string (framing, angle, staging),"lens":string (focal length, aperture, depth of field),"lighting":string (sources, direction, quality, contrast),"grade":string (color palette, contrast, blacks),"texture":string (grain, sharpness, artifacts, filtration),"motion":string (camera + subject movement, editing pace),"mood":string,"vfx":string (post/VFX and transition recipe: glitch, datamosh, RGB split, speed ramp, teleport/jump-cut vanish, morph, strobe, VHS scanlines, overlays — empty string if the reference is a plain unaffected shot),"negative":string (comma separated things to avoid),"tags":string[] (3 short lowercase tags)}
 
 Be concrete and technical. No markdown, no commentary.`;
 
