@@ -66,7 +66,7 @@ export function StudioPanel({ prompt, presetName }: { prompt: string; presetName
     try {
       if (mode === "image") {
         setStatus("Rendering with " + engine.label + "…");
-        await streamImage({ prompt, engine: engine.id, reference: reference ?? undefined }, (url, final) => {
+        await streamImage({ prompt, engine: engine.id, ...(reference ? { reference } : {}) }, (url, final) => {
           setImage(url);
           if (final) setImageFinal(true);
         });

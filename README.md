@@ -1,4 +1,4 @@
-# Style Snapshot
+# Aurora Preset Engine
 
 make me a system that turns a video or image into a reusable presets these as examples
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Copy, Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatPrompt, type Preset, type TargetModel } from "@/lib/presets";
+import { StudioPanel } from "@/components/StudioPanel";
 
 export function PresetCard({
   preset,
@@ -67,6 +68,8 @@ export function PresetCard({
         <pre className="max-h-44 overflow-auto rounded-sm bg-background/60 p-3 font-mono text-[11px] leading-relaxed whitespace-pre-wrap text-foreground/90">
           {prompt}
         </pre>
+
+        <StudioPanel prompt={prompt} presetName={preset.name} />
 
         <button
           onClick={() => setOpen((v) => !v)}

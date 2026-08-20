@@ -9,13 +9,13 @@ import { SEED_PRESETS, TARGET_MODELS, type Preset } from "@/lib/presets";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Style DNA — Turn Any Video or Image Into a Reusable Preset" },
+      { title: "Aurora Preset Engine — Video or Image Into a Reusable Preset" },
       {
         name: "description",
         content:
           "Drop a clip or photo and get a reusable prompt preset — camera, lens, lighting, grade and motion — formatted for Wan, Seedance, Seedream, Kling, Grok Imagine, Flux and more.",
       },
-      { property: "og:title", content: "Style DNA — Reusable Prompt Presets From Any Reference" },
+      { property: "og:title", content: "Aurora Preset Engine — Reusable Prompt Presets From Any Reference" },
       {
         property: "og:description",
         content:
@@ -44,7 +44,7 @@ export function PresetsEngineStudio() {
       <header className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-10 md:py-16">
           <p className="label-kicker flex items-center gap-2">
-            <Film className="size-3.5" /> preset engine v1
+            <Film className="size-3.5" /> aurora preset engine v1
           </p>
           <h1 className="mt-3 text-5xl md:text-7xl">
             Turn any clip into a<span className="text-primary"> reusable look</span>
@@ -105,7 +105,7 @@ export function PresetsEngineStudio() {
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center">
-        <p className="label-kicker">style dna — presets, not screenshots</p>
+        <p className="label-kicker">aurora preset engine — presets, not screenshots</p>
       </footer>
     </main>
   );

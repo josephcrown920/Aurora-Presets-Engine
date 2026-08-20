@@ -1,5 +1,5 @@
 /**
- * Safe host ↔ iframe messaging for the Aurora Presets Engine embed.
+ * Safe host ↔ iframe messaging for the Aurora Preset Engine embed.
  */
 export const EMBED_SOURCE = "aurora-presets-engine";
 

@@ -30,7 +30,7 @@ export const Route = createFileRoute("/embed")({
   }),
   head: () => ({
     meta: [
-      { title: "Aurora Presets Engine — Embedded Editor" },
+      { title: "Aurora Preset Engine — Embedded Editor" },
       { name: "robots", content: "noindex" },
     ],
   }),
