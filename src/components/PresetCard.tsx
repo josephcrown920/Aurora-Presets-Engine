@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Copy, Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatPrompt, type Preset, type TargetModel } from "@/lib/presets";
+import { StudioPanel } from "@/components/StudioPanel";
 
 export function PresetCard({
   preset,
