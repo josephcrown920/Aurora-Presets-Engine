@@ -1,6 +1,6 @@
-# Embedding Aurora Presets Engine
+# Embedding Aurora Preset Engine
 
-The full Presets Engine is available at `/embed`. The route mounts the same editor as the standalone page, inside an iframe document, so its existing typography, spacing, and controls remain unchanged in Aurora.
+The full Preset Engine is available at `/embed`. The route mounts the same editor as the standalone page, inside an iframe document, so its existing typography, spacing, and controls remain unchanged in Aurora.
 
 ## Deployment configuration
 
@@ -18,7 +18,7 @@ Framing is controlled by CSP `frame-ancestors`. `X-Frame-Options` is intentional
 <AuroraEmbed
   kind="presets-engine"
   src="https://your-presets-engine-domain/embed"
-  title="Aurora Presets Engine"
+  title="Aurora Preset Engine"
 />
 ```
 
