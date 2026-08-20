@@ -25,10 +25,10 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Index,
+  component: PresetsEngineStudio,
 });
 
-function Index() {
+export function PresetsEngineStudio() {
   const [modelId, setModelId] = useState(TARGET_MODELS[0]!.id);
   const [subject, setSubject] = useState("");
   const [extracted, setExtracted] = useState<Preset[]>([]);
