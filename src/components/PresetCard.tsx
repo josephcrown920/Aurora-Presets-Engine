@@ -68,6 +68,8 @@ export function PresetCard({
           {prompt}
         </pre>
 
+        <StudioPanel prompt={prompt} presetName={preset.name} />
+
         <button
           onClick={() => setOpen((v) => !v)}
           className="label-kicker flex w-full items-center justify-between hover:text-foreground"
