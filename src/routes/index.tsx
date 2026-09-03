@@ -44,12 +44,15 @@ export function PresetsEngineStudio() {
       <header className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-10 md:py-16">
           <p className="label-kicker flex items-center gap-2">
-            <Film className="size-3.5" /> aurora preset engine v1
+            <Film className="size-4" /> preset engine v1
           </p>
-          <h1 className="mt-3 text-5xl md:text-7xl">
-            Turn any clip into a<span className="text-primary"> reusable look</span>
+          <h1 className="mt-3 text-6xl leading-[0.9] text-accent sm:text-7xl md:text-8xl lg:text-9xl">
+            Aurora&rsquo;s Presets
           </h1>
-          <p className="mt-4 max-w-xl text-sm text-muted-foreground md:text-base">
+          <h2 className="mt-5 text-3xl md:text-5xl">
+            Turn any clip into a<span className="text-primary"> reusable look</span>
+          </h2>
+          <p className="mt-4 max-w-xl text-base font-bold text-muted-foreground md:text-lg">
             Every reference below has been broken down into its style DNA. Pick your engine, swap
             the subject, copy the prompt. Same look, new scene.
           </p>
