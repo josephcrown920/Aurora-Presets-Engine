@@ -65,7 +65,7 @@ export function PresetCard({
           ))}
         </div>
 
-        <pre className="max-h-44 overflow-auto rounded-sm bg-background/60 p-3 font-mono text-[11px] leading-relaxed whitespace-pre-wrap text-foreground/90">
+        <pre className="max-h-44 overflow-auto rounded-sm bg-background/60 p-3 font-mono text-sm leading-relaxed whitespace-pre-wrap text-foreground/90">
           {prompt}
         </pre>
 
@@ -82,7 +82,7 @@ export function PresetCard({
         </button>
 
         {open && (
-          <dl className="grid gap-2 border-t border-border pt-3 text-xs">
+          <dl className="grid gap-2 border-t border-border pt-3 text-sm">
             {Object.entries(preset.dna).map(([k, v]) => (
               <div key={k}>
                 <dt className="label-kicker">{k}</dt>

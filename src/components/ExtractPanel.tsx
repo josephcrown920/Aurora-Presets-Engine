@@ -111,11 +111,11 @@ export function ExtractPanel({ onExtracted }: { onExtracted: (p: Preset) => void
       </div>
 
       {busy && (
-        <p className="mt-3 flex items-center gap-2 text-xs text-accent">
+        <p className="mt-3 flex items-center gap-2 text-sm text-accent">
           <Sparkles className="size-3.5" /> Reverse-engineering the look…
         </p>
       )}
-      {error && <p className="mt-3 text-xs text-destructive">{error}</p>}
+      {error && <p className="mt-3 text-sm text-destructive">{error}</p>}
     </div>
   );
 }
