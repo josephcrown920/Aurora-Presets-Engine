@@ -121,7 +121,7 @@ export function StudioPanel({ prompt, presetName }: { prompt: string; presetName
           <button
             key={m}
             onClick={() => pickMode(m)}
-            className={`rounded-sm border px-2.5 py-1 font-mono text-[11px] uppercase transition-colors ${
+            className={`rounded-sm border px-2.5 py-1 font-mono text-sm uppercase transition-colors ${
               mode === m
                 ? "border-primary bg-primary text-primary-foreground"
                 : "border-border text-muted-foreground hover:text-foreground"
@@ -139,7 +139,7 @@ export function StudioPanel({ prompt, presetName }: { prompt: string; presetName
             key={e.id}
             onClick={() => setEngine(e)}
             title={e.note}
-            className={`rounded-sm border px-2 py-1 font-mono text-[10px] transition-colors ${
+            className={`rounded-sm border px-2 py-1 font-mono text-sm transition-colors ${
               e.id === engine.id
                 ? "border-accent text-accent"
                 : "border-border text-muted-foreground hover:text-foreground"
@@ -156,7 +156,7 @@ export function StudioPanel({ prompt, presetName }: { prompt: string; presetName
             <button
               key={s.id}
               onClick={() => setSize(s.id)}
-              className={`rounded-sm border px-2 py-1 font-mono text-[10px] ${
+              className={`rounded-sm border px-2 py-1 font-mono text-sm ${
                 s.id === size ? "border-accent text-accent" : "border-border text-muted-foreground"
               }`}
             >
@@ -167,7 +167,7 @@ export function StudioPanel({ prompt, presetName }: { prompt: string; presetName
             <button
               key={s}
               onClick={() => setSeconds(s)}
-              className={`rounded-sm border px-2 py-1 font-mono text-[10px] ${
+              className={`rounded-sm border px-2 py-1 font-mono text-sm ${
                 s === seconds ? "border-accent text-accent" : "border-border text-muted-foreground"
               }`}
             >
@@ -202,8 +202,8 @@ export function StudioPanel({ prompt, presetName }: { prompt: string; presetName
         </span>
       </div>
 
-      {status && <p className="text-xs text-accent">{status}</p>}
-      {error && <p className="text-xs text-destructive">{error}</p>}
+      {status && <p className="text-sm text-accent">{status}</p>}
+      {error && <p className="text-sm text-destructive">{error}</p>}
 
       {image && (
         <div className="space-y-2">

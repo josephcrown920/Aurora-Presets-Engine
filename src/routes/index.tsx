@@ -69,7 +69,7 @@ export function PresetsEngineStudio() {
                 <button
                   key={m.id}
                   onClick={() => setModelId(m.id)}
-                  className={`rounded-sm border px-3 py-1.5 font-mono text-xs transition-colors ${
+                  className={`rounded-sm border px-3 py-1.5 font-mono text-sm transition-colors ${
                     m.id === modelId
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border text-muted-foreground hover:border-primary/60 hover:text-foreground"
@@ -87,7 +87,7 @@ export function PresetsEngineStudio() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               placeholder="e.g. a woman in a white fur coat holding a burning rose"
-              className="font-mono text-xs"
+              className="font-mono text-sm"
             />
           </div>
         </div>
